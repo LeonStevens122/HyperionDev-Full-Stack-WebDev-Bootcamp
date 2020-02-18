@@ -1,0 +1,454 @@
+/*sets the background for the entire page to an animated gradient*/
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+
+/*  styling for quickspan element*/
+.quickSpan {
+    margin: auto;
+}
+
+/* Styling for background Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* styling for h2 elements*/
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/*Sets Styling for an Image*/
+.profile-image {
+    margin-top: 80px;
+
+    height: 180px;
+    width: 180px;
+    border-color: rgb(50, 50, 50);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+/*CSS Styling that changes the images to round */
+.img-round {
+    object-position: center;
+    height: 225px;
+    width: 95%;
+    padding: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-color: orangered;
+    z-index: -1;
+    border-radius: 50%;
+
+    filter: grayscale(100%);
+}
+
+
+/*CSS Styling for the Main header*/
+.main-head {
+    text-align: center;
+    color: white;
+}
+
+/*CSS styling for the selected image in the Priduct Page*/
+.SelectedImage {
+    width: 95%;
+    padding: 20px;
+}
+
+/*Set Styling for Nav Bar*/
+.topNav {
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+
+/*CSS Styling for the desciption paragraph*/
+
+.customForm {
+    text-align: center;
+    color: white;
+    font-family: arial;
+
+}
+
+/*Sets Styling for an Image*/
+
+
+.profile-image {
+    margin-top: 80px;
+
+    height: 180px;
+    width: 180px;
+    border-color: rgb(50, 50, 50);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+
+/* styling for items displayed on Cart Page */
+.cartListCSS {
+    display: inline-block;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+/* styling for Paragraph elements inside elements with CartListCSS class */
+.cartListCSS p {
+    display: inline;
+    padding: 10px;
+
+
+}
+
+/*Set Styling for elements with the Description class*/
+.description {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: arial;
+}
+
+/* float trashIcon to the righ hand side of the Cart Element */
+.trashIcon {
+    float: right;
+}
+
+
+/*changes mouse cursor to pointer when hovering over the trach icon to indicate that it can be clicked on*/
+.trashIcon:hover {
+    cursor: pointer;
+}
+
+/*Centers the SelectSize form*/
+.selectSize {
+    margin: auto;
+
+}
+
+/*Floats a Column Left and allows space for an image*/
+.abt-column {
+    float: left;
+    width: 70%;
+}
+
+/*add padding to the quickadd button*/
+.btnQuickAdd {
+    padding: 5px;
+
+}
+
+/*Sets styling for a Column*/
+.about-parr {
+    font-family: Georgia, serif;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 120px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    background-color: black;
+    color: white;
+    padding-left: 50px;
+}
+
+
+/*Description 1 CSS Class Styling*/
+.description1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*Description 2 CSS Class Styling*/
+
+.description2 {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font: italic bold 12px/30px Georgia, serif;
+
+}
+
+
+/*CSS Styling for Submint Buttons*/
+.subButton {
+    color: white;
+    border: solid 3px #fff;
+    border-radius: 30%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 28px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/*CSS Styling for the Invites List*/
+.invites {
+    padding-left: 45%;
+
+    text-align: left;
+    color: white;
+}
+
+/*aligns the amounts displayed on the bottom of the page to the right */
+.amounts {
+    align-items: right;
+}
+
+
+/*styling for the acordion elements */
+.accordion {
+    margin: 50px;
+    color: white;
+    background-color: black;
+}
+
+/*styling for list elements in the acordian*/
+.accordion dt,
+dd {
+    background-color: grey;
+    padding: 10px;
+    border: 1px solid blue;
+    border-bottom: 0;
+
+    &:last-of-type {
+        border-bottom: 1px solid blue;
+    }
+
+}
+
+/*styling for link elements in the acordion section*/
+.accordion a {
+    background-color: black;
+    display: block;
+    color: white;
+    font-weight: bold;
+}
+
+/*CSS Styling that crops the images linked to look more uniform in the grid, and adds a border and box shadow to the images */
+.imgcrop {
+
+    object-position: center;
+    height: 225px;
+    width: 95%;
+    padding: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-color: orangered;
+    border-radius: 15%;
+    box-shadow: 10px 10px 5px rgb(240, 255, 255);
+    z-index: -1;
+}
+
+/*Hover Effect for images with the ImcGrop Class*/
+.imgcrop:hover {
+
+    object-position: center;
+    opacity: 50%;
+    z-index: 500;
+}
+
+/*set padding and margin for the delivery options Div Elements*/
+#delOptionsDivs {
+    padding: 20px;
+    margin: 30px;
+}
+
+/*align the items displayed in the collectDiv element to center of the page*/
+#collectDiv {
+    align-self: auto;
+
+    text-align: center;
+}
+
+/* Set Styling for Cart Items */
+.cartImg {
+    float: left;
+    width: 30%;
+
+    padding: 10px;
+
+}
+
+/*
+set styling for Catalogue images*/
+.catImg {
+    float: top;
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+
+}
+
+/* set styling for list of items in shopping cart */
+.cartList {
+    margin: auto;
+    padding: 20px;
+    list-style: none;
+}
+
+/*CSS Styling that changes the images to round */
+.img-round {
+    object-position: center;
+    height: 225px;
+    width: 95%;
+    padding: 5px;
+    margin: 10px;
+    border-style: solid;
+    border-color: orangered;
+    z-index: -1;
+    border-radius: 50%;
+
+    filter: grayscale(100%);
+}
+
+/*Sets the CSS Styling of all the input elements */
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+/*CSS Styling that changes the background color and centers the Size Table */
+.size-table {
+    background-color: rgb(240, 255, 255);
+    border-style: solid;
+    border-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/*CSS Styling for the Social Media Icon Buttons on the page*/
+.button {
+    color: rgb(150, 40, 150);
+    border: solid 3px #fff;
+    border-radius: 40%;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 48px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/*css styling aligning the social media icons in a line*/
+.icon-list {
+    text-align: center;
+    display: inline;
+}
+
+/*css styling for the social media icons*/
+.icon-div {
+    color: white;
+    display: inline;
+}
+
+/*css styling for the submit button on the form*/
+.sub-button {
+    background: linear-gradient(to right top, grey, black);
+    border-style: solid;
+    border-color: red;
+    color: white;
+    border: 8px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/*CSS Styling for Whem mouse hovers over imaged with the thumbnail class*/
+.thumbnail:hover {
+    position: relative;
+    opacity: 50%;
+    z-index: 999;
+}
+
+/*
+.test {
+    color: white;
+}*/
+
+
+/* Carousels */
+.carousel-control.right,
+.carousel-control.left {
+    background: none;
+    color: #888;
+}
+
+#featuredCarousel {
+    margin-bottom: 25px;
+}
+
+#featuredCarousel .carousel {
+    height: 500px;
+}
+
+#featuredCarousel .carousel .item {
+    height: 500px;
+    color: white;
+}
+
+#testimonialCarousel .carousel {
+    height: 175px;
+}
+
+#testimonialCarousel .item {
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+}
+
+/* Testimonials */
+#testimonialCarousel p {
+    font-size: 18px;
+    font-weight: 200;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+#testimonialCarousel p.testimonial_author {
+    color: #03518d;
+    font-family: 'Old Standard TT', serif;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: none;
+    font-size: 36px;
+    margin-top: 25px;
+}

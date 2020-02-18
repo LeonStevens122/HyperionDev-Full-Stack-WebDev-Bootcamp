@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js"></script>
+    <!-- link Javascrip file to page-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="catStyle.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="./StoreScript.js"></script>
+    <title>Leon Stevens - WebDev Task 15 - Shopping Cart</title>
+</head>
+<!-- load cart items on page load -->
+
+<body onload="loadCart()">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <!-- NAV bar for the top of the page -->
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center topNav navbar-fixed-top">
+        <ul class="justify-content-center navbar-nav navbar-fixed-top">
+            <li class="nav-item">
+                <a class="nav-link" href="Task15Landing.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">IMAGE CATALOGUE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="CustomPrint.html">CUSTOM PRINTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Cart.html">SHOPPING CART</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--   page header  -->
+    <h1 class="display-1 main-head">Shopping Cart</h1>
+    <section id="cartListSection">
+        <!--   empty unordered list is populated from session storage using Javascript -->
+        <ul class="cartList container-fluid" id="cartItems">
+            <li>
+                <div>
+                </div>
+            </li>
+        </ul>
+        <br style="clear:both">
+    </section>
+    <!-- display totals  -->
+    <section id="orderTotalsSection">
+        <div id="divSubTotal" class="container-fluid grid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3> Total Excluding V.A.T. - </h3>
+                </div>
+                <div class="col-sm-6">
+                    <h3 id="exTotal" class="amounts"> R 0.00</h3>
+                </div>
+            </div>
+        </div>
+        <div id="divCoupon" class="container-fluid grid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3> Discount Amount - </h3>
+                </div>
+                <div class="col-sm-6">
+                    <h3 id="discountTotal" class="amounts"> R 0.00</h3>
+                </div>
+            </div>
+        </div>
+        <div id="divCouponApplied" class="container-fluid grid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3> Discounts Applied - </h3>
+                </div>
+                <div class="col-sm-6">
+                    <h3 id="afterDiscountAmount" class="amounts"> R 0.00</h3>
+                </div>
+            </div>
+        </div>
+        <div id="divVat" class="container-fluid grid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3> V.A.T. - </h3>
+                </div>
+                <div class="col-sm-6">
+                    <h3 id="vat" class="amounts"> R 0.00</h3>
+                </div>
+            </div>
+        </div>
+        <div id="divIncl" class="container-fluid grid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h3> Total - </h3>
+                </div>
+                <div class="col-sm-6">
+                    <h3 id="inclTotal" class="amounts"> R 0.00</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button onClick="location.reload()">update Cart</button>
+    <!--  button to clear Cart Items  -->
+    <button onClick="clearCart()">Clear Cart</button>
+    <!-- button to go to Discount Coupon Page -->
+    <button id="btnDiscount" onclick="applyDiscount()" class="btn btn-primary btn-lg btn-block">Apply Discount Coupons</button>
+    <!--  button to go to checkout Page -->
+    <button id="btnCheckOut" onclick="checkout()" class="btn btn-primary btn-lg btn-block">Check Out</button>
+    <div class="icon-div">
+        <h5>AROUND THE WEB</h5>
+        <ul class="icon-list">
+            <li class="icon-list">
+                <a class="button social" href="https://www.linkedin.com/in/leon-stevens-2a6787157">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="icon-list"><a class="button social" href="https://github.com/LeonStevens122"><i class="fa fa-fw fa-github"></i></a></li>
+            <li class="icon-list"><a class="button social" href="https://www.facebook.com/leon.stevens.3517"><i class="fa fa-fw fa-facebook"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

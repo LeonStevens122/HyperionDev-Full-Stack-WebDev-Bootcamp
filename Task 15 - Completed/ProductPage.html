@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- link Javascrip file to page-->
+    <script type="text/javascript" src="StoreScript.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="catStyle.css" type="text/css">
+    <title>Leon Stevens - WebDev Task 15 - Product Page</title>
+</head>
+
+<body onload="LoadProduct()">
+    <!-- NAV bar for the top of the page -->
+    <nav class="navbar navbar-expand-sm bg-dark justify-content-center topNav navbar-fixed-top">
+        <ul class="justify-content-center navbar-nav navbar-fixed-top">
+            <li class="nav-item">
+                <a class="nav-link" href="Task7Landing.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">IMAGE CATALOGUE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="CustomPrint.html">CUSTOM PRINTS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Cart.html">SHOPPING CART</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT US</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!--   sub heading describing product -->
+    <!--   page header  -->
+    <h1 class="display-1 main-head">Your Selected Image</h1>
+    <div class="SelectedImage container-fluid">
+        <img id="LinkedImage" class="SelectedImage" src="https://via.placeholder.com/300.png/09f/fff" alt="Your Selected Image">
+    </div>
+    <!-- HTML Table with Hover effect -->
+    <h2 class="text-center description">Select the PostCard Size</h2>
+    <div class="container">
+        <table class="table table-hover table-condensed size-table">
+            <!--      heading row -->
+            <tr>
+                <th>Post Card Size</th>
+                <th>Characters allowed in message</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td> 4" x 6"</td>
+                <td>140</td>
+                <td>R 100</td>
+            </tr>
+            <tr>
+                <td> 5" x 7</td>
+                <td>180</td>
+                <td>R 150</td>
+            </tr>
+            <tr>
+                <td>6" x 9"</td>
+                <td>200</td>
+                <td>R 200</td>
+            </tr>
+            <tr>
+                <td>6" x 11" </td>
+                <td>240</td>
+                <td>R 300</td>
+            </tr>
+        </table>
+    </div>
+    <!--   Radio Button Forms -->
+    <div class="container selectSize">
+        <form name="optradio" class="form-inline customForm selectSize">
+            <div class="form-check">
+                <label class="form-check-label" for="radio1">
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>4" x 6"
+                </label>
+            </div>
+            <div class="form-check selectSize">
+                <label class="form-check-label" for="radio2">
+                    <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">5" x 7"
+                </label>
+            </div>
+            <div class="form-check selectSize">
+                <label class="form-check-label" for="radio3">
+                    <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">6" x 9"
+                </label>
+            </div>
+            <div class="form-check selectSize">
+                <label class="form-check-label" for="radio4">
+                    <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">6" x 11"
+                </label>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <!-- container-fluid class ensures that the element spans the entire page -->
+        <form class="form-horizontal " id="contactForm" novalidate="">
+            <div class="form-group">
+                <label class="“control-label col-sm-2 name”">Message</label>
+                <textarea id="message" rows="5" class="form-control" placeholder="Message" required=""></textarea>
+            </div>
+            <div class="form-group">
+                <label class="“control-label col-sm-2 name”">Address</label>
+                <textarea class="form-control" rows="5" id="address"></textarea>
+            </div>
+            <button id="btnProductAdd" type="submit" onclick="addCartItem()" class="sub-button">Add to Cart</button>
+        </form>
+    </div>
+    <!--   Set of icons linking to social media pages -->
+    <div class="icon-div">
+        <h5>AROUND THE WEB</h5>
+        <ul class="icon-list">
+            <li class="icon-list">
+                <a class="button social" href="https://www.linkedin.com/in/leon-stevens-2a6787157">
+                    <i class="fa fa-fw fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="icon-list"><a class="button social" href="https://github.com/LeonStevens122"><i class="fa fa-fw fa-github"></i></a></li>
+            <li class="icon-list"><a class="button social" href="https://www.facebook.com/leon.stevens.3517"><i class="fa fa-fw fa-facebook"></i></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
