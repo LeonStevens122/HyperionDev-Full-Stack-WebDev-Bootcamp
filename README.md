@@ -7,6 +7,6 @@
 Online PostCard Store uses basic HTML &  JS + JQuery to populate a fictitious online store with images and 
 add them to a shopping cart page 
 
-JQuery animations and Boostrap stylinf used throughout
+JQuery animations and Boostrap styling used throughout
 
 
